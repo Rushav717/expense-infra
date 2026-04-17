@@ -21,7 +21,7 @@ pipeline {
                     withAWS(region:'us-east-1',credentials:'aws-creds')
                     {
                         sh """
-                            cd 40-ecr
+                            cd 50-ecr
                             terraform init -reconfigure
                             terraform plan
                         """
@@ -39,7 +39,7 @@ pipeline {
                     withAWS(region:'us-east-1',credentials:'aws-creds')
                     {
                         sh """
-                            cd 40-ecr
+                            cd 50-ecr
                             terraform apply -auto-approve
                         """
                     }
