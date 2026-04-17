@@ -1,6 +1,6 @@
 resource "aws_key_pair" "eks" {
   key_name   = "expense-eks"
-  public_key = file("C:/devops/daws-82s/daws-82s.pub")
+  public_key = file("${path.module}/daws-82s.pub")
   }
 
 module "eks" {
